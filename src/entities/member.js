@@ -1,9 +1,21 @@
 function createMember(alias, level) {
-    //TODO: validations pending
+    const aliasType = typeof alias;
+    const levelType = typeof level;
+
+    if (aliasType == "string" && levelType == "number") {
+        console.log("HEllo");
+        return {
+            alias,
+            level,
+        };
+    } else {
+        console.log("Error");
+    }
+
     return {
         alias,
-        level
-    }
+        level,
+    };
 }
 
-module.exports = createMember
+module.exports = createMember;

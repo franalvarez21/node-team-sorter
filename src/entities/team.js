@@ -1,17 +1,21 @@
-class Team
-{
+class Team {
+    constructor(members) {
+        this.members = members;
+    }
+
     addMember(member) {
-        let team = [];
-        team.push(member);
-        return team;
+        members.push(member);
     }
-    
-    removeMember(id) {
-        //TODO
+
+    removeMember(alias) {
+        const index = array.indexOf(alias);
+        this.members.splice(index, 1);
     }
-    
+
     getWeight() {
-        // TODO
+        return this.members.reduce((a, b) => {
+            a + b, 0;
+        });
     }
 }
 

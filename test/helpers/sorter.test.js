@@ -1,6 +1,4 @@
-const level = require('../../src/entities/level')
 const members = require('../../src/entities/member')
-const Team = require('../../src/entities/team')
 const Sorter = require('../../src/helpers/sorter')
 
 const sorter = new Sorter(0, [])

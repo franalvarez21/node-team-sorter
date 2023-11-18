@@ -1,6 +1,6 @@
-const members = require('../../src/entities/member')
+const createMember = require('../../src/entities/member')
 
-const member = members.createMember("juan", 0)
+const member = createMember("juan", 0)
 
 test('create member with name and seniority', () => {
     expect(member.alias).toEqual("juan");

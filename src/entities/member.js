@@ -6,6 +6,4 @@ function createMember(alias, level) {
     }
 }
 
-module.exports = {
-    createMember,
-};
+module.exports = createMember

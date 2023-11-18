@@ -1,6 +1,6 @@
 const createMember = require("../entities/member") 
 
-export default function readJSONData(data){
+function readJSONData(data){
 
     const parsedData = JSON.parse(data)
 
@@ -9,3 +9,5 @@ export default function readJSONData(data){
     });
     return parsedData
 }
+
+module.exports = readJSONData

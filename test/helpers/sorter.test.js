@@ -1,17 +1,17 @@
-const members = require('../../src/entities/member')
+const createMember = require('../../src/entities/member')
 const Sorter = require('../../src/helpers/sorter')
 
 const sorter = new Sorter(0, [])
 
-const memberA = members.createMember("juan", 0)
-const memberB = members.createMember("fran", 2)
-const memberC = members.createMember("fran2", 1)
-const memberD = members.createMember("fran3", 2)
-const memberE = members.createMember("fran4", 1)
-const memberF = members.createMember("fran5", 2)
-const memberG = members.createMember("fran6", 1)
-const memberH = members.createMember("fran7", 2)
-const memberI = members.createMember("fran8", 1)
+const memberA = createMember("juan", 0)
+const memberB = createMember("fran", 2)
+const memberC = createMember("fran2", 1)
+const memberD = createMember("fran3", 2)
+const memberE = createMember("fran4", 1)
+const memberF = createMember("fran5", 2)
+const memberG = createMember("fran6", 1)
+const memberH = createMember("fran7", 2)
+const memberI = createMember("fran8", 1)
 
 test('show level names', () => {
     sorter.setTeamSize(3)

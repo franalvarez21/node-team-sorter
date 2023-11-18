@@ -3,19 +3,23 @@ class Team {
         this.members = members;
     }
 
-    addMember(member) {
-        members.push(member);
+    addMember(members) {
+        this.members.push(members);
     }
 
     removeMember(alias) {
-        const index = array.indexOf(alias);
+        const index = this.members.indexOf(alias);
         this.members.splice(index, 1);
     }
 
     getWeight() {
-        return this.members.reduce((a, b) => {
-            a + b, 0;
+        let sum = 0;
+
+        this.members.forEach(member => {
+            sum += member.level;
         });
+
+        return sum;
     }
 }
 

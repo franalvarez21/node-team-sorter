@@ -1,4 +1,4 @@
-function createMember(alias, level) {
+export function createMember(alias, level) {
     const member = {
         alias,
         level,

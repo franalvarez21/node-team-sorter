@@ -1,7 +1,15 @@
 export function addMember(member) {
-    class team {}
-    // define TEAM ?? as class, not array?
+    let team = [];
+    team.push(member);
     return team;
+}
+
+export function removeMember(id) {
+    //TODO
+}
+
+export function getWeight() {
+    // TODO
 }
 
 module.exports = addMember;

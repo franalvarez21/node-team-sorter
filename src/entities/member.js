@@ -1,8 +1,9 @@
-export function createMember(alias, level) {
-    const member = {
-        alias,
-        level,
-    };
+export function createMember(id, alias, level) {
+    class member {
+        id;
+        alias;
+        level;
+    }
     return member;
 }
 

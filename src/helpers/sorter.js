@@ -28,11 +28,11 @@ export default class Sorter{
         for (let i = 0; i < this.members.length; i++) {
 
             weights = this.teams.map(x => x.reduce((y)=>y.getWeight(),0))
-            let listIndex = Math.min(...weights)// Obtaining the index value by it's mod operator, indicating the position
+            listIndex = Math.min(...weights)// Obtaining the index value by it's mod operator, indicating the position
             teams[listIndex].push(this.members[i]); // adding the value of the position of the team list for every team.
 
           }
-
+        
         
     }
    

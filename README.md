@@ -1,2 +1,2 @@
-# node-pdftotext-extractor
-PDF to text extractor
+# node-team-sorter
+Team sorter base on seniority and team structures

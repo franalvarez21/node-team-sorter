@@ -1,0 +1,23 @@
+{
+  "name": "team-sorter",
+  "version": "0.1.0",
+  "description": "Team sorter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franalvarez21/node-team-sorter.git"
+  },
+  "keywords": [
+    "team",
+    "sorter"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franalvarez21/node-team-sorter/issues"
+  },
+  "homepage": "https://github.com/franalvarez21/node-team-sorter#readme"
+}

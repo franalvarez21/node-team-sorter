@@ -1,6 +1,6 @@
 /* Class that defines a sorter object. This sorter object 
 will perform a variety of operations on the registered teams data.*/
-export default class Sorter{
+class Sorter {
     constructor(size, members){
         this.teamSize = size
         this.members = members
@@ -10,7 +10,7 @@ export default class Sorter{
     /*this function sets the custom size that teams might have,
     although this value can change on certain teams depending
     on the demand.*/
-    setTeamSize = (size) => teamSize=size
+    setTeamSize = (size) => this.teamSize=size
 
 
     executeSorting = ()=>{
@@ -50,4 +50,4 @@ export default class Sorter{
     
 }
 
-
+module.exports = Sorter;

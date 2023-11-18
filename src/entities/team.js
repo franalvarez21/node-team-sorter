@@ -8,8 +8,7 @@ class Team {
     }
 
     removeMember(alias) {
-        const index = this.members.indexOf(alias);
-        this.members.splice(index, 1);
+        this.members = this.members.filter(member => member.alias != alias);
     }
 
     getWeight() {

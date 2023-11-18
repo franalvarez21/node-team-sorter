@@ -3,7 +3,7 @@ const members = require('../../src/entities/member')
 const Team = require('../../src/entities/team')
 const Sorter = require('../../src/helpers/sorter')
 
-const sorter = new Sorter()
+const sorter = new Sorter(0, [])
 
 const memberA = members.createMember("juan", 0)
 const memberB = members.createMember("fran", 2)
@@ -17,6 +17,7 @@ const memberI = members.createMember("fran8", 1)
 
 test('show level names', () => {
     sorter.setTeamSize(3)
+    sorter.executeSorting()
     sorter.addMember(memberA)
     sorter.addMember(memberB)
     sorter.addMember(memberC)
@@ -26,5 +27,5 @@ test('show level names', () => {
     sorter.addMember(memberG)
     sorter.addMember(memberH)
     sorter.addMember(memberI)
-    expect(team.getTeams().size.toBe(3))
+    expect(sorter.getTeams().length).toBe(3)
 });

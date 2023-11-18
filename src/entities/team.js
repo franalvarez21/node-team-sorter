@@ -4,6 +4,7 @@ class Team {
     }
 
     addMember(members) {
+        //TODO: validations pending
         this.members.push(members);
     }
 

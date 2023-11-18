@@ -1,13 +1,11 @@
-function createMember(id, alias, level) {
+function createMember(alias, level) {
     class member {
-        id;
         alias;
         level;
     }
     return member;
 }
 
-module.exports =
-{
-    createMember
+module.exports = {
+    createMember,
 };

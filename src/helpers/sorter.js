@@ -4,7 +4,7 @@ export default class Sorter{
     constructor(size, members){
         this.teamSize = size
         this.members = members
-        this.teamsArray = []
+        this.teams = []
     }
 
     /*this function sets the custom size that teams might have,
@@ -12,13 +12,42 @@ export default class Sorter{
     on the demand.*/
     setTeamSize = (size) => teamSize=size
 
-    
-    executeSorting = ()=>{
 
+    executeSorting = ()=>{
+        //First, people will be sorted by experience
+        //The array of memebers must be ordered by less to more experience
+        this.members.sort((m1,m2) => m1.getWeight() - m2.level.getWeight() )
+
+        //Then there will be created as many arrays for teams as the teamSize property indicates
+        this.teams = Array.from({ length: this.teamSize }, () => [])
+
+        /*Once the teams are created, this loop will perform a sorting process in 
+        which the ordered members will be allocated on the lesser weight team respectively  */
+        let listIndex =0
+        let weights//this variable will be used to get the array of weights respectively from each array team on teams.
+        for (let i = 0; i < this.members.length; i++) {
+
+            weights = this.teams.map(x => x.reduce((y)=>y.getWeight(),0))
+            let listIndex = Math.min(...weights)// Obtaining the index value by it's mod operator, indicating the position
+            teams[listIndex].push(this.members[i]); // adding the value of the position of the team list for every team.
+
+          }
+
+        
     }
-    getTeamsArray = () => this.teamsArray
-    getTeamAt = (index) => this.teamsArray[index]
-    showTeams = () => console.log(this.teamsArray)
-    addPersonToSorter = (person) => this.members.push(person)
+   
+    getTeams = () => this.teams
+    getTeam = (index) => this.teams[index]
+    showTeams = () => console.log(this.teams)
+    addMember= (person) => {
+        this.members.push(person)
+        this.members.sort((m1,m2) => m1.level - m2.level )
+    }
+    addMembers= (persons) => {
+        this.members.push(...persons)
+        this.members.sort((m1,m2) => m1.level - m2.level )
+    }
     
 }
+
+

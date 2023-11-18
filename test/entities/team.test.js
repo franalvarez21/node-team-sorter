@@ -1,8 +1,8 @@
 const members = require('../../src/entities/member')
 const Team = require('../../src/entities/team')
 
-const memberA = members.createMember(0, "juan", 0)
-const memberB = members.createMember(1, "fran", 2)
+const memberA = members.createMember("juan", 0)
+const memberB = members.createMember("fran", 2)
 
 const team = new Team();
 

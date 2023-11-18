@@ -9,7 +9,7 @@ const team = new Team();
 test('show level names', () => {
     team.addMember(memberA);
     team.addMember(memberB);
-    expect(team.getWeight().toBe(2));
+    expect(team.getWeight()).toBe(2);
     team.removeMember(0);
-    expect(team.getWeight().toBe(1));
+    expect(team.getWeight()).toBe(1);
 });

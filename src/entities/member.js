@@ -1,4 +1,4 @@
-export function createMember(id, alias, level) {
+function createMember(id, alias, level) {
     class member {
         id;
         alias;
@@ -7,4 +7,7 @@ export function createMember(id, alias, level) {
     return member;
 }
 
-module.exports = createMember;
+module.exports =
+{
+    createMember
+};

@@ -1,15 +1,18 @@
-export function addMember(member) {
-    let team = [];
-    team.push(member);
-    return team;
+class Team
+{
+    addMember(member) {
+        let team = [];
+        team.push(member);
+        return team;
+    }
+    
+    removeMember(id) {
+        //TODO
+    }
+    
+    getWeight() {
+        // TODO
+    }
 }
 
-export function removeMember(id) {
-    //TODO
-}
-
-export function getWeight() {
-    // TODO
-}
-
-module.exports = addMember;
+module.exports = Team;

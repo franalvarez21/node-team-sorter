@@ -1,21 +1,24 @@
-export function getNameLevel(level) {
+function getNameLevel(level) {
     switch (level) {
         case 0:
-            level = "Junior";
+            level = "junior";
             break;
         case 1:
-            level = "Mid";
+            level = "mid";
             break;
         case 2:
-            level = "Senior";
+            level = "senior";
             break;
         default:
             console.log(
                 "El usuario no cumple el criterio, se asignará nivel Junior"
             );
-            level = "Junior";
+            level = "junior";
     }
     return level;
 }
 
-module.exports = getNameLevel;
+module.exports = 
+{
+    getNameLevel
+};

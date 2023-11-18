@@ -1,6 +1,6 @@
 export function addMember(member) {
-    const team = [];
-    team.push(member);
+    class team {}
+    // define TEAM ?? as class, not array?
     return team;
 }
 

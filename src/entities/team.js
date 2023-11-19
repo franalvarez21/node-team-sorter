@@ -3,7 +3,7 @@ class Team {
         this.members = members;
     }
 
-    addMember(members) {
+    addMember = (members) => {
         console.log(members);
         if (!members.alias && !members.level) {
             throw new Error("This isn't a team!");
@@ -12,11 +12,11 @@ class Team {
         this.members.push(members);
     }
 
-    removeMember(alias) {
+    removeMember = (alias) => {
         this.members = this.members.filter((member) => member.alias != alias);
     }
 
-    getWeight() {
+    getWeight = () => {
         let sum = 0;
 
         this.members.forEach((member) => {

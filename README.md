@@ -76,13 +76,7 @@ To utilize the functionality provided by the `Sorter` class in `sorter.js`, foll
     // Replace 'filepath' and 'member' with appropriate values
     sorter.importMember(filepath, member);
     ```
-
-8. **Exporting Members to JSON**:
-
-    ```javascript
-    // TODO: Implement the exportMember method in Sorter class
-    sorter.exportMember();
-    ```
+    
 
 ### Using the readJSONData Function
 

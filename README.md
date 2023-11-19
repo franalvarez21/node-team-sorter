@@ -13,7 +13,7 @@ A team sorter library for code-jam events based on the seniority of applicants a
 ## Install
 
 - clone the repository from github
-- install the package by `npm i team-sorter` or `npm install team-sorter`
+- install the package by `npm i team-sorter` or `npm install team-sorter`. !(For the moment, it can only be installed via `npm link team-sorter` in the project you want to use it)
 
 ## Usage
 

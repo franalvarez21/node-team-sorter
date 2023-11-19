@@ -1,13 +1,8 @@
-const createMember = require("../entities/member") 
+const createMember = require("../entities/member");
+const fs = require("fs-extra");
 
-function readJSONData(data){
-
-    const parsedData = JSON.parse(data)
-
-    parsedData.forEach(member => {
-        member = createMember(member.alias,member.level)
-    });
-    return parsedData
+function readJSONData(data) {
+    return JSON.parse(fs.readFileSync(data, "utf-8"));
 }
 
-module.exports = readJSONData
+module.exports = readJSONData;

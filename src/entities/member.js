@@ -3,13 +3,14 @@ function createMember(alias, level) {
     const levelType = typeof level;
 
     if (aliasType == "string" && levelType == "number") {
-        console.log("HEllo");
         return {
             alias,
             level,
         };
     } else {
-        console.log("Error");
+        throw new Error(
+            "Ha habido un error - No se han insertado correctamente los campos"
+        );
     }
 
     return {

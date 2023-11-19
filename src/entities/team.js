@@ -4,18 +4,20 @@ class Team {
     }
 
     addMember(members) {
-        //TODO: validations pending
+        if (!members.alias || !members.level) {
+            throw new Error("This isn't a team!");
+        }
         this.members.push(members);
     }
 
     removeMember(alias) {
-        this.members = this.members.filter(member => member.alias != alias);
+        this.members = this.members.filter((member) => member.alias != alias);
     }
 
     getWeight() {
         let sum = 0;
 
-        this.members.forEach(member => {
+        this.members.forEach((member) => {
             sum += member.level;
         });
 

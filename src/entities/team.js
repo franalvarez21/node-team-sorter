@@ -4,7 +4,6 @@ class Team {
     }
 
     addMember(members) {
-        console.log(members);
         if (!members.alias && !members.level) {
             throw new Error("This isn't a team!");
         }

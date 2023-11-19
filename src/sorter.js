@@ -1,5 +1,6 @@
 const createMember = require("../src/entities/member");
 const readJSONData = require("./helpers/jsonIO");
+const Team = require('../src/entities/team');
 
 /* Class that defines a sorter object. This sorter object 
 will perform a variety of operations on the registered teams data.*/
@@ -21,16 +22,16 @@ class Sorter {
         this.members.sort((m1, m2) => m1.level - m2.level);
 
         //Then there will be created as many arrays for teams as the teamSize property indicates
-        this.teams = Array.from({ length: this.teamSize }, () => []);
+        this.teams = Array.from({ length: this.teamSize }, () => new Team([]));
 
         /*Once the teams are created, this loop will perform a sorting process in 
         which the ordered members will be allocated on the lesser weight team respectively  */
         let listIndex = 0;
         let weights; //this variable will be used to get the array of weights respectively from each array team on teams.
         for (let i = 0; i < this.members.length; i++) {
-            weights = this.teams.map((x) => x.reduce((y) => y.getWeight(), 0));
+            weights = this.teams.map((y) => y.getWeight(), 0);
             listIndex = Math.min(...weights); // Obtaining the index value by it's mod operator, indicating the position
-            this.teams[listIndex].push(this.members[i]); // adding the value of the position of the team list for every team.
+            this.teams[listIndex].addMember(this.members[i]); // adding the value of the position of the team list for every team.
         }
     };
 

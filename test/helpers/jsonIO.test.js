@@ -1,14 +1,10 @@
-const jsonIO = require("../../src/helpers/jsonIO")
-const jsonData = JSON.stringify(
-    [
-    {alias:"Alfa",level:0},
-    {alias:"Beta",level:5},
-    {alias:"Omega",level:10}
-    ]
-)
-console.log("datos creados en JSON: "+jsonData)
+const path = require("path");
+const filePath = path.join(__dirname, "test.json");
+const readJSONData = require("../../src/helpers/jsonIO");
+const jsonData = JSON.stringify({
+    members: [{ alias: "user", level: 0 }],
+});
 
-expect(jsonIO(jsonData)[0].alias).toBe("Alfa")
-
-
-
+test("Check JSON read function", () => {
+    expect(JSON.stringify(readJSONData(filePath))).toEqual(jsonData);
+});

@@ -1,3 +1,4 @@
+const createMember = require("../src/entities/member");
 const readJSONData = require("./helpers/jsonIO");
 
 /* Class that defines a sorter object. This sorter object 
@@ -17,7 +18,7 @@ class Sorter {
     executeSorting = () => {
         //First, people will be sorted by experience
         //The array of memebers must be ordered by less to more experience
-        this.members.sort((m1, m2) => m1.getWeight() - m2.level.getWeight());
+        this.members.sort((m1, m2) => m1.level - m2.level);
 
         //Then there will be created as many arrays for teams as the teamSize property indicates
         this.teams = Array.from({ length: this.teamSize }, () => []);
@@ -29,14 +30,16 @@ class Sorter {
         for (let i = 0; i < this.members.length; i++) {
             weights = this.teams.map((x) => x.reduce((y) => y.getWeight(), 0));
             listIndex = Math.min(...weights); // Obtaining the index value by it's mod operator, indicating the position
-            teams[listIndex].push(this.members[i]); // adding the value of the position of the team list for every team.
+            this.teams[listIndex].push(this.members[i]); // adding the value of the position of the team list for every team.
         }
     };
 
-    getMembers = () => this.members;
     getTeams = () => this.teams;
     getTeam = (index) => this.teams[index];
     showTeams = () => console.log(this.teams);
+
+    getMembers = () => this.members;
+
     addMember = (person) => {
         this.members.push(person);
         this.members.sort((m1, m2) => m1.level - m2.level);
@@ -47,10 +50,11 @@ class Sorter {
     };
 
     // Recibimos la ruta del example.json y el objeto JSON del miembro
-    //Importing a single member from a properly formed json source that contains a list of memebers
-    importMember = (json,index) => {
-    const data = readJSONData(json)
-    this.addMember(data[index])
-    }
+    importMembers = (filePath) => {
+        //Importing a single member from a properly formed json source that contains a list of memebers
+        readJSONData(filePath).members.forEach((member) => {
+            this.members.push(createMember(member.alias, member.level));
+        });
+    };
 }
-module.exports = Sorter
+module.exports = Sorter;

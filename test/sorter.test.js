@@ -1,7 +1,7 @@
 const createMember = require("../src/entities/member");
 const Sorter = require("../src/sorter");
 const path = require("path");
-const filePath = path.join(__dirname, "../example.json");
+const filePath = path.join(__dirname, "example.json");
 
 test("show level names", () => {
     const sorter = new Sorter(0, []);
@@ -32,6 +32,6 @@ test("show level names", () => {
 
 test("Process example.json", () => {
     const sorter = new Sorter(0, []);
-    sorter.importMember("../example.json");
+    sorter.importMembers(filePath);
     expect(sorter.getMembers().length).toBe(11);
 });

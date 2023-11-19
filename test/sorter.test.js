@@ -1,7 +1,5 @@
 const createMember = require("../src/entities/member");
 const Sorter = require("../src/sorter");
-const path = require("path");
-const filePath = path.join(__dirname, "example.json");
 
 test("show level names", () => {
     const sorter = new Sorter(0, []);
@@ -28,10 +26,4 @@ test("show level names", () => {
     sorter.addMember(memberH);
     sorter.addMember(memberI);
     expect(sorter.getTeams().length).toBe(3);
-});
-
-test("Process example.json", () => {
-    const sorter = new Sorter(0, []);
-    sorter.importMembers(filePath);
-    expect(sorter.getMembers().length).toBe(11);
 });

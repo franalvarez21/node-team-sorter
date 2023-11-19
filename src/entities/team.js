@@ -12,6 +12,10 @@ class Team {
         this.members.push(members);
     }
 
+    getMembers = () => {
+        return this.members;
+    }
+
     removeMember = (alias) => {
         this.members = this.members.filter((member) => member.alias != alias);
     }

@@ -13,7 +13,22 @@
                 "alias": "UserC",
                 "level": 3
             }
+        ],
+        "TeamB": [
+            {
+                "alias": "UserD",
+                "level": 1
+            },
+            {
+                "alias": "UserE",
+                "level": 2
+            },
+            {
+                "alias": "UserF",
+                "level": 3
+            }
         ]
+        
     },
     "members":[
         {

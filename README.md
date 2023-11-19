@@ -1,4 +1,4 @@
-# Nombre del Proyecto
+# Team sorter
 
 A team sorter library for code-jam events based on the seniority of applicants and the number of teams desired.
 
@@ -13,7 +13,7 @@ A team sorter library for code-jam events based on the seniority of applicants a
 ## Install
 
 - clone the repository from github
-- install the package by `npm i` or `npm install`
+- install the package by `npm i team-sorter` or `npm install team-sorter`
 
 ## Usage
 
@@ -73,8 +73,8 @@ To utilize the functionality provided by the `Sorter` class in `sorter.js`, foll
 7. **Importing Members from JSON**:
 
     ```javascript
-    // Replace 'filepath' and 'member' with appropriate values
-    sorter.importMember(filepath, member);
+    // Replace 'filepath' with the appropriate value
+    sorter.importMembers(filepath);
     ```
     
 
@@ -139,5 +139,5 @@ This repository is licensed under the MIT License, Copyright (c) 2023 Fran J. Al
 
 ## Authors
 
-@franalvarez21 @DavidAugustoHernandezMartin @Depechejuan
+[@franalvarez21](https://github.com/franalvarez21) [@DavidAugustoHernandezMartin](https://github.com/DavidAugustoHernandezMartin) [@Depechejuan](https://github.com/Depechejuan)
 

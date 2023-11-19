@@ -1,3 +1,5 @@
+const fs = require("fs-extra");
+
 function createMember(alias, level) {
     const aliasType = typeof alias;
     const levelType = typeof level;

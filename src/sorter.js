@@ -1,5 +1,4 @@
 const createMember = require("../src/entities/member");
-const readJSONData = require("./helpers/jsonIO");
 const Team = require('../src/entities/team');
 
 /* Class that defines a sorter object. This sorter object 
@@ -42,20 +41,14 @@ class Sorter {
     getMembers = () => this.members;
 
     addMember = (person) => {
-        this.members.push(person);
-        this.members.sort((m1, m2) => m1.level - m2.level);
-    };
-    addMembers = (persons) => {
-        this.members.push(...persons);
-        this.members.sort((m1, m2) => m1.level - m2.level);
+        if (this.members.map(e => e.alias).indexOf(person.alias) == -1)
+        {
+            this.members.push(person);
+        }
     };
 
-    // Recibimos la ruta del example.json y el objeto JSON del miembro
-    importMembers = (filePath) => {
-        //Importing a single member from a properly formed json source that contains a list of memebers
-        readJSONData(filePath).members.forEach((member) => {
-            this.members.push(createMember(member.alias, member.level));
-        });
+    addMembers = (persons) => {
+        this.members.push(...persons);
     };
 }
 module.exports = Sorter;

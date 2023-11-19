@@ -3,13 +3,21 @@ class Team {
         this.members = members;
     }
 
-    addMember(members) {
-        if (!members.alias && !members.level) {
+    addMember(member) {
+        if (
+            !member.alias &&
+            !member.level &&
+            this.members.indexOf(member) != -1
+        ) {
             throw new Error("This isn't a team!");
         }
 
-        this.members.push(members);
+        this.members.push(member);
     }
+
+    getMembers = () => {
+        return this.members;
+    };
 
     removeMember = (alias) => {
         this.members = this.members.filter((member) => member.alias != alias);

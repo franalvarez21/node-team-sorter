@@ -47,12 +47,10 @@ class Sorter {
     };
 
     // Recibimos la ruta del example.json y el objeto JSON del miembro
-    importMember = (filePath) => {
-        //Importing a single member from a properly formed json source that contains a list of memebers
-        importMember = (json,index) => {
-        const data = readJSONData(json)
-        this.addMember(data[index])
+    //Importing a single member from a properly formed json source that contains a list of memebers
+    importMember = (json,index) => {
+    const data = readJSONData(json)
+    this.addMember(data[index])
     }
-
 }
 module.exports = Sorter

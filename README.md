@@ -2,7 +2,7 @@
 
 A team sorter library for code-jam events based on the seniority of applicants and the number of teams desired.
 
-***This respository is a solution for the Interacso & Teralco's 2023 Open Source Jam of Alicante.***
+***This respository is a solution for the [Interacso](https://interacso.com/)& [Teralco](https://teralco.com/)'s 2023 Open Source Jam of Alicante.***
 
 ## Contents table
 

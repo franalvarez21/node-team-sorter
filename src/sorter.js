@@ -29,8 +29,8 @@ class Sorter {
         let listIndex = 0;
         let weights; //this variable will be used to get the array of weights respectively from each array team on teams.
         for (let i = 0; i < this.members.length; i++) {
-            weights = this.teams.map((y) => y.getWeight(), 0);
-            listIndex = Math.min(...weights); // Obtaining the index value by it's mod operator, indicating the position
+            weights = this.teams.map((y) => y.getWeight());
+            listIndex = weights.indexOf(Math.min(...weights)); // Obtaining the index value by it's mod operator, indicating the position
             this.teams[listIndex].addMember(this.members[i]); // adding the value of the position of the team list for every team.
         }
     };

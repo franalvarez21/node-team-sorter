@@ -1,0 +1,64 @@
+{
+    "teams":{
+        "teamA":[
+            {
+                "alias": "UserA",
+                "level": 1
+            },
+            {
+                "alias": "UserB",
+                "level": 2
+            },
+            {
+                "alias": "UserC",
+                "level": 3
+            }
+        ]
+    },
+    "members":[
+        {
+            "alias": "UserA",
+            "level": 3
+        },
+        {
+            "alias": "UserB",
+            "level": 3
+        },
+        {
+            "alias": "UserC",
+            "level": 3
+        },
+        {
+            "alias": "UserD",
+            "level": 2
+        },
+        {
+            "alias": "UserE",
+            "level": 2
+        },
+        {
+            "alias": "UserF",
+            "level": 2
+        },
+        {
+            "alias": "UserG",
+            "level": 2
+        },
+        {
+            "alias": "UserH",
+            "level": 2
+        },
+        {
+            "alias": "UserI",
+            "level": 1
+        },
+        {
+            "alias": "UserJ",
+            "level": 1
+        },
+        {
+            "alias": "UserK",
+            "level": 1
+        }
+    ]
+}

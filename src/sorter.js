@@ -1,6 +1,4 @@
-const fs = require("fs-extra");
-const path = require("path");
-const filePath = path.join(__dirname, "../example.json");
+const readJSONData = require("./helpers/jsonIO")
 
 /* Class that defines a sorter object. This sorter object 
 will perform a variety of operations on the registered teams data.*/
@@ -47,23 +45,11 @@ class Sorter {
         this.members.sort((m1, m2) => m1.level - m2.level);
     };
 
-    importMember = (filepath, member) => {
-        function readJson(filePath) {
-            const content = fs.readFileSync(filePath, "utf-8");
-            return JSON.parse(content);
-        }
-
-        //
-        this.addMember(member);
+    //Importing a single member from a properly formed json source that contains a list of memebers
+    importMember = (json,index) => {
+        const data = readJSONData(json)
+        this.addMember(data[index]);
     };
-
-    exportMember = () => {
-        // TODO
-    };
-
-    // importMember -- le pasamos el nombre del json y que use jsonIO y que vaya haciendo add member de todos los miembros-
-    // -- export teams -- pasamos nombre de archivo y nos exporte un json con la estructura del example.
-    //
 }
 
 module.exports = Sorter;

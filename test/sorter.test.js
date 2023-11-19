@@ -1,4 +1,4 @@
-const createMember = require('../../src/entities/member')
+const createMember = require('../src/entities/member')
 const Sorter = require('../../src/helpers/sorter')
 
 const sorter = new Sorter(0, [])

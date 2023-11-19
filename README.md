@@ -17,7 +17,101 @@ A team sorter library for code-jam events based on the seniority of applicants a
 
 ## Usage
 
-Guía o ejemplos de cómo utilizar el proyecto. Puede incluir ejemplos de código, capturas de pantalla o instrucciones detalladas.
+### Using the Sorter Class
+
+To utilize the functionality provided by the `Sorter` class in `sorter.js`, follow these steps:
+
+1. **Import the Sorter Class**:
+
+    ```javascript
+    const Sorter = require('./sorter.js');
+    ```
+
+2. **Create an Instance of Sorter**:
+
+    ```javascript
+    // Replace 'size' and 'members' with your desired values
+    const sorter = new Sorter(size, members);
+    ```
+
+3. **Set the Team Size** (Optional):
+
+    ```javascript
+    // Set a custom size for teams
+    sorter.setTeamSize(customSize);
+    ```
+
+4. **Execute Sorting**:
+
+    ```javascript
+    sorter.executeSorting();
+    ```
+
+5. **Access Teams Information**:
+
+    ```javascript
+    // Get all teams
+    const teams = sorter.getTeams();
+
+    // Get a specific team by index
+    const specificTeam = sorter.getTeam(index);
+
+    // Display teams in the console
+    sorter.showTeams();
+    ```
+
+6. **Adding Members**:
+
+    ```javascript
+    // Add a single member
+    sorter.addMember(person);
+
+    // Add multiple members
+    sorter.addMembers(persons);
+    ```
+
+7. **Importing Members from JSON**:
+
+    ```javascript
+    // Replace 'filepath' and 'member' with appropriate values
+    sorter.importMember(filepath, member);
+    ```
+
+8. **Exporting Members to JSON**:
+
+    ```javascript
+    // TODO: Implement the exportMember method in Sorter class
+    sorter.exportMember();
+    ```
+
+### Using the readJSONData Function
+
+The `readJSONData` function in `jsonIO.js` assists in parsing JSON data for member information. Here's how you can use it:
+
+1. **Import the Function**:
+
+    ```javascript
+    const readJSONData = require('./jsonIO.js');
+    ```
+
+2. **Call the Function with JSON Data**:
+
+    ```javascript
+    // Pass your JSON data to parse
+    const parsedData = readJSONData(yourJSONData);
+    ```
+
+3. **Utilize the Parsed Data**:
+
+    The function returns parsed data with member information.
+
+    ```javascript
+    // Use the parsed data as needed
+    console.log(parsedData); // Example: Display parsed data in the console
+    ```
+
+Please ensure to replace placeholder values like `'size'`, `'members'`, `'filepath'`, `'member'`, and `'yourJSONData'` with actual data and variables from your application.
+
 
 ## Contribution
 

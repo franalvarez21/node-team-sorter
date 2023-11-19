@@ -11,11 +11,11 @@ class Team {
         this.members.push(members);
     }
 
-    removeMember(alias) {
+    removeMember = (alias) => {
         this.members = this.members.filter((member) => member.alias != alias);
-    }
+    };
 
-    getWeight() {
+    getWeight = () => {
         let sum = 0;
 
         this.members.forEach((member) => {
@@ -23,7 +23,7 @@ class Team {
         });
 
         return sum;
-    }
+    };
 }
 
 module.exports = Team;
